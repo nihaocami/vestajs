@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(/bg.png);
+  background-color: #1f2022;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: white;
+  overflow: hidden;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(22, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 5px;
+  width: 80vw;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+.tile {
+  aspect-ratio: 1.43/2;
+  background: rgb(33, 33, 33);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  transition: background 0.3s, transform 0.3s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  border-top-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-left-color: black;
+  border-right-color: #393939;
+  border-bottom-color: #393939;
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.dialog textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 1rem;
+  resize: none;
+  box-sizing: border-box;
+}
+.dialog button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  background-color: #252628;
+  color: white;
+  padding: 5px 10px;
+  border: 2px solid #3e3e3e;
+  border-radius: 5px;
+}
+#sound {
+  height: 20px;
+}
+button:hover {
+  background-color: #373739;
+  cursor: pointer;
+}
+.hinge {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #181818;
+  mix-blend-mode: darken;
+}

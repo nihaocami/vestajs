@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vestaboard Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="board" id="board"></div>
+    <div class="controls">
+      <img
+        id="sound"
+        src="sound-off.svg"
+        alt="sound control"
+        onclick="toggleSound()"
+      />
+      <button class="toggle-button" onclick="toggleDialog()"
+        >Enter Message</button
+      >
+    </div>
+
+    <div class="dialog" id="messageDialog" style="display: none">
+      <textarea
+        id="message"
+        placeholder="Enter message"
+        rows="6"
+        cols="22"
+      ></textarea>
+      <button onclick="displayMessage(); toggleDialog();">Display</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
